@@ -37,7 +37,6 @@ public class Coins {
 
 		int result = 0;
 		int tempCounter = countPairs(coins);
-		//test
 
 		if (searchForThree(coins)) {
 			result = tempCounter + PAIRS_GAINED_WHEN_SWAP_THREE;
