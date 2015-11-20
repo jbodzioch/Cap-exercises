@@ -19,9 +19,6 @@ public class PascalRectangle {
 
 			result = rectangle[r][c - 1];
 		}
-		/*
-		 * else{ throw new InvalidInputException(); }
-		 */
 
 		return result;
 	}
