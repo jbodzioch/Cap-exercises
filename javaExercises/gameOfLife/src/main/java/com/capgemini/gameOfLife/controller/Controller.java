@@ -8,7 +8,7 @@ public class Controller {
 	public Controller() {
 	}
 	
-	public void startThis(){
+	public void startRunning(){
 		
 		GameOfLife game = new GameOfLife();
 		View view = new View();
