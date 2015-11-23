@@ -7,10 +7,10 @@ import java.util.List;
 
 import org.junit.Test;
 
-import com.capgemini.texasHoldem.Card;
-import com.capgemini.texasHoldem.Hand;
-import com.capgemini.texasHoldem.SortedHand;
-import com.capgemini.texasHoldem.Values;
+import com.capgemini.texasHoldem.model.Card;
+import com.capgemini.texasHoldem.model.Hand;
+import com.capgemini.texasHoldem.model.SortedHand;
+import com.capgemini.texasHoldem.model.Values;
 
 public class ValuesTest {
 	

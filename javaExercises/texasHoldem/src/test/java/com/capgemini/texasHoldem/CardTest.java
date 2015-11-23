@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.capgemini.texasHoldem.Card;
+import com.capgemini.texasHoldem.model.Card;
 
 public class CardTest {
 

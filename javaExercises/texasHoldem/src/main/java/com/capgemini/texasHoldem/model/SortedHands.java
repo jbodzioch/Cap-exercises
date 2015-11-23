@@ -1,4 +1,4 @@
-package com.capgemini.texasHoldem;
+package com.capgemini.texasHoldem.model;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.capgemini.texasHoldem;
+package com.capgemini.texasHoldem.model;
 
 import java.util.*;
 
@@ -8,14 +8,23 @@ public class Poker {
 
 	private int numberOfPlayers = 4;
 	private List<String> deck = new ArrayList<String>();
+	List<Hand> hands = new ArrayList<Hand>();
+	WinCounter wins;
+	
+	public void setNumberOfPlayers(int numberOfPlayers){
+		this.numberOfPlayers = numberOfPlayers;
+	}
+	
+	public int getNumberOfPlayers(){
+		return numberOfPlayers;
+	}
 
 	public Poker() {
 
-		List<Hand> hands = createHands(deck);
+		hands = createHands(deck);
 		List<SortedHand> sortedHands = sortHands(hands);
 		Values values = evaluate(sortedHands);
-		WinCounter wins = countFirstHandWins(values);
-		printWins(wins);
+		wins = countFirstHandWins(values);
 	}
 
 	private Hand createHand(List<String> deck) {
@@ -24,21 +33,38 @@ public class Poker {
 		Hand hand;
 
 		for (int i = 0; i < HANDSIZE; i++) {
-			int randomCard = (int) (Math.random() * deck.size());
-
-			handInput.add(new Card(deck.get(randomCard)));
-			deck.remove(randomCard);
+			handInput.add(getCardFromDeck());
 		}
 		
-
-		for(int i=0; i<handInput.size(); i++){
-			System.out.print(Integer.toString(handInput.get(i).getValue()) + handInput.get(i).getColor() + " ");
-		}
-		System.out.println();
-
 		hand = new Hand(handInput);
 
 		return hand;
+	}
+	
+	public Card getCardFromDeck(){
+		Card result;
+		
+		int randomCard = (int) (Math.random() * deck.size());
+		
+		result = new Card(deck.get(randomCard));
+		deck.remove(randomCard);
+		
+		return result;
+	}
+	
+	public String printHands(){
+		
+		List<Hand> cardList = hands;
+		String result = "";
+		
+		for(int i=0; i<cardList.size(); i++){
+			for(int j=0; j<cardList.get(i).getHand().size(); j++){
+				result = result + Integer.toString(cardList.get(i).getHand().get(j).getValue()) + cardList.get(i).getHand().get(j).getColor() + " ";
+			}
+			result = result + "\n";
+		}
+		
+		return result.substring(0, result.length()-1);
 	}
 
 	private List<Hand> createHands(List<String> deck) {
@@ -78,9 +104,10 @@ public class Poker {
 		return wins;
 	}
 
-	private void printWins(WinCounter winCounter) {
-
-		System.out.println("Won by : " + winCounter.getWhoWon());
+	public String printWins() {
+		String result = "Won by : " + wins.getWhoWon();
+		
+		return result;
 		
 	}
 

@@ -6,9 +6,9 @@ import java.util.*;
 
 import org.junit.Test;
 
-import com.capgemini.texasHoldem.Card;
-import com.capgemini.texasHoldem.Hand;
-import com.capgemini.texasHoldem.SortedHand;
+import com.capgemini.texasHoldem.model.Card;
+import com.capgemini.texasHoldem.model.Hand;
+import com.capgemini.texasHoldem.model.SortedHand;
 
 public class SortedHandsTest {
 	
