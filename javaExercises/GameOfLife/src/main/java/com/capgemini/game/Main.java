@@ -1,4 +1,4 @@
-package source;
+package main.java.com.capgemini.game;
 
 public class Main {
 

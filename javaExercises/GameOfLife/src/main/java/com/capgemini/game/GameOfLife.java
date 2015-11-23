@@ -1,4 +1,4 @@
-package source;
+package main.java.com.capgemini.game;
 
 import java.util.*;
 import java.util.Map.Entry;

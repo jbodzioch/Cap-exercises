@@ -1,4 +1,4 @@
-package source;
+package main.java.com.capgemini.game;
 
 import java.awt.BorderLayout;
 import java.awt.Font;
