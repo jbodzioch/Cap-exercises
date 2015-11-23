@@ -33,11 +33,11 @@ public class Values {
 	}
 
 	public void setValues(List<SortedHand> sortedHand) {
-		
-		for (int i =0; i<sortedHand.size(); i++){
 
-		values.add(checkRoyalStraightFlush(sortedHand.get(i).getCountList(),
-				sortedHand.get(i).getValueList(), sortedHand.get(i).getColorList()));
+		for (int i = 0; i < sortedHand.size(); i++) {
+
+			values.add(checkRoyalStraightFlush(sortedHand.get(i).getCountList(), sortedHand.get(i).getValueList(),
+					sortedHand.get(i).getColorList()));
 		}
 
 	}

@@ -8,14 +8,14 @@ public class Poker {
 
 	private int numberOfPlayers = 4;
 	private List<String> deck = new ArrayList<String>();
-	List<Hand> hands = new ArrayList<Hand>();
-	WinCounter wins;
-	
-	public void setNumberOfPlayers(int numberOfPlayers){
+	private List<Hand> hands = new ArrayList<Hand>();
+	private WinCounter wins;
+
+	public void setNumberOfPlayers(int numberOfPlayers) {
 		this.numberOfPlayers = numberOfPlayers;
 	}
-	
-	public int getNumberOfPlayers(){
+
+	public int getNumberOfPlayers() {
 		return numberOfPlayers;
 	}
 
@@ -35,36 +35,37 @@ public class Poker {
 		for (int i = 0; i < HANDSIZE; i++) {
 			handInput.add(getCardFromDeck());
 		}
-		
+
 		hand = new Hand(handInput);
 
 		return hand;
 	}
-	
-	public Card getCardFromDeck(){
+
+	public Card getCardFromDeck() {
 		Card result;
-		
+
 		int randomCard = (int) (Math.random() * deck.size());
-		
+
 		result = new Card(deck.get(randomCard));
 		deck.remove(randomCard);
-		
+
 		return result;
 	}
-	
-	public String printHands(){
-		
+
+	public String printHands() {
+
 		List<Hand> cardList = hands;
 		String result = "";
-		
-		for(int i=0; i<cardList.size(); i++){
-			for(int j=0; j<cardList.get(i).getHand().size(); j++){
-				result = result + Integer.toString(cardList.get(i).getHand().get(j).getValue()) + cardList.get(i).getHand().get(j).getColor() + " ";
+
+		for (int i = 0; i < cardList.size(); i++) {
+			for (int j = 0; j < cardList.get(i).getHand().size(); j++) {
+				result = result + Integer.toString(cardList.get(i).getHand().get(j).getValue())
+						+ cardList.get(i).getHand().get(j).getColor() + " ";
 			}
 			result = result + "\n";
 		}
-		
-		return result.substring(0, result.length()-1);
+
+		return result.substring(0, result.length() - 1);
 	}
 
 	private List<Hand> createHands(List<String> deck) {
@@ -106,9 +107,9 @@ public class Poker {
 
 	public String printWins() {
 		String result = "Won by : " + wins.getWhoWon();
-		
+
 		return result;
-		
+
 	}
 
 	{

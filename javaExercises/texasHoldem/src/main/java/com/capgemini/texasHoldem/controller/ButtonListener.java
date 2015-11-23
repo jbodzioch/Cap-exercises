@@ -8,18 +8,16 @@ import java.awt.event.ActionListener;
 
 public class ButtonListener implements ActionListener {
 
-//	private Poker poker;
-//	private View view;
-//
-//	public ButtonListener(Poker poker, View view) {
-//		this.poker = poker;
-//		this.view = view;
-//	}
+	// private Poker poker;
+	// private View view;
+	//
+	// public ButtonListener(Poker poker, View view) {
+	// this.poker = poker;
+	// this.view = view;
+	// }
 
 	public void actionPerformed(ActionEvent e) {
-		
-		
-	}
 
+	}
 
 }

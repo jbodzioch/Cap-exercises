@@ -7,13 +7,13 @@ public class Controller {
 
 	public Controller() {
 	}
-	
-	public void startRunning(){
-		
+
+	public void startRunning() {
+
 		Poker poker = new Poker();
 		View view = new View();
 
-//		view.setupActionListener(new ButtonListener(poker, view));
+		// view.setupActionListener(new ButtonListener(poker, view));
 		view.getArea().setText(poker.printHands());
 		view.getField().setText(poker.printWins());
 	}

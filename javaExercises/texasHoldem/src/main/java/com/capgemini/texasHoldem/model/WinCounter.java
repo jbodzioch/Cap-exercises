@@ -45,35 +45,35 @@ public class WinCounter {
 		int result = 0;
 		int tempMax = 0;
 		List<Integer> tempWinners = new ArrayList<Integer>();
-		
-		for(int i=0; i<values.getValues().size(); i++){
-			if(values.getValues().get(i)>tempMax){
+
+		for (int i = 0; i < values.getValues().size(); i++) {
+			if (values.getValues().get(i) > tempMax) {
 				tempMax = values.getValues().get(i);
 				result = i;
 			}
 		}
-		
-		for(int i=0; i<values.getValues().size(); i++){
-			if(values.getValues().get(i)==tempMax){
+
+		for (int i = 0; i < values.getValues().size(); i++) {
+			if (values.getValues().get(i) == tempMax) {
 				tempWinners.add(i);
 			}
 		}
-		
-		if(tempWinners.size()>1){
+
+		if (tempWinners.size() > 1) {
 			result = checkWhenDraw(tempWinners);
-				
+
 		}
 
-		return result+1;
+		return result + 1;
 	}
 
 	private int checkWhenDraw(List<Integer> list) {
 
 		int result = 0;
 		int tempMax = 0;
-		
-		for(int i=0; i<list.size(); i++){
-			if(sortedHands.get(i).getValueList().get(0)>tempMax){
+
+		for (int i = 0; i < list.size(); i++) {
+			if (sortedHands.get(i).getValueList().get(0) > tempMax) {
 				tempMax = sortedHands.get(i).getValueList().get(0);
 				result = list.get(i);
 			}

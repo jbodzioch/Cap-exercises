@@ -28,7 +28,7 @@ public class Card {
 	}
 
 	public Card(String input) {
-		
+
 		char value = input.charAt(0);
 		char color = input.charAt(1);
 

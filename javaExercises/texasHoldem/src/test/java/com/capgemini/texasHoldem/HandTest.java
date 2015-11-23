@@ -9,13 +9,12 @@ import org.junit.Test;
 import com.capgemini.texasHoldem.model.Card;
 import com.capgemini.texasHoldem.model.Hand;
 
-
 public class HandTest {
-	
+
 	public final int HANDSIZE = 5;
-	
-	public Hand makeHand(String input){
-	
+
+	public Hand makeHand(String input) {
+
 		List<String> deck = new ArrayList<String>();
 		deck.add(input.substring(0, 2));
 		deck.add(input.substring(3, 5));
@@ -24,7 +23,7 @@ public class HandTest {
 		deck.add(input.substring(12, 14));
 
 		List<Card> handInput = new ArrayList<Card>();
-		
+
 		for (int i = 0; i < HANDSIZE; i++) {
 
 			handInput.add(new Card(deck.get(i)));
@@ -60,7 +59,7 @@ public class HandTest {
 	public void shouldReturnHandValues() {
 
 		String line = "8C TS KC 9H 4S 7D 2S 5D 3S AC";
-		
+
 		List<Integer> expected = new ArrayList<Integer>();
 		List<Integer> actual = new ArrayList<Integer>();
 

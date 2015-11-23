@@ -38,7 +38,7 @@ public class View extends JFrame {
 	public JTextArea getArea() {
 		return theArea;
 	}
-	
+
 	public JTextField getField() {
 		return theField;
 	}

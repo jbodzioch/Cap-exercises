@@ -13,11 +13,11 @@ import com.capgemini.texasHoldem.model.SortedHand;
 import com.capgemini.texasHoldem.model.Values;
 
 public class ValuesTest {
-	
+
 	private final int HANDSIZE = 5;
-	
-	public Hand makeHand(String input){
-		
+
+	public Hand makeHand(String input) {
+
 		List<String> deck = new ArrayList<String>();
 		deck.add(input.substring(0, 2));
 		deck.add(input.substring(3, 5));
@@ -26,7 +26,7 @@ public class ValuesTest {
 		deck.add(input.substring(12, 14));
 
 		List<Card> handInput = new ArrayList<Card>();
-		
+
 		for (int i = 0; i < HANDSIZE; i++) {
 
 			handInput.add(new Card(deck.get(i)));
@@ -46,7 +46,7 @@ public class ValuesTest {
 		List<SortedHand> sortedHands = new ArrayList<SortedHand>();
 		sortedHands.add(new SortedHand(hands));
 		sortedHands.add(new SortedHand(hands2));
-		
+
 		Values values = new Values(sortedHands);
 
 		int expected1 = 0;
@@ -68,7 +68,7 @@ public class ValuesTest {
 		List<SortedHand> sortedHands = new ArrayList<SortedHand>();
 		sortedHands.add(new SortedHand(hands));
 		sortedHands.add(new SortedHand(hands2));
-	
+
 		Values values = new Values(sortedHands);
 
 		int expected1 = 1;
@@ -90,7 +90,7 @@ public class ValuesTest {
 		List<SortedHand> sortedHands = new ArrayList<SortedHand>();
 		sortedHands.add(new SortedHand(hands));
 		sortedHands.add(new SortedHand(hands2));
-	
+
 		Values values = new Values(sortedHands);
 
 		int expected1 = 2;
@@ -98,7 +98,6 @@ public class ValuesTest {
 
 		int actual1 = values.getValues().get(0);
 		int actual2 = values.getValues().get(1);
-
 
 		assertEquals(expected1, actual1);
 		assertEquals(expected2, actual2);
@@ -113,7 +112,7 @@ public class ValuesTest {
 		List<SortedHand> sortedHands = new ArrayList<SortedHand>();
 		sortedHands.add(new SortedHand(hands));
 		sortedHands.add(new SortedHand(hands2));
-	
+
 		Values values = new Values(sortedHands);
 		int expected1 = 3;
 		int expected2 = 3;
@@ -134,7 +133,7 @@ public class ValuesTest {
 		List<SortedHand> sortedHands = new ArrayList<SortedHand>();
 		sortedHands.add(new SortedHand(hands));
 		sortedHands.add(new SortedHand(hands2));
-	
+
 		Values values = new Values(sortedHands);
 		int expected1 = 4;
 		int expected2 = 4;
@@ -155,7 +154,7 @@ public class ValuesTest {
 		List<SortedHand> sortedHands = new ArrayList<SortedHand>();
 		sortedHands.add(new SortedHand(hands));
 		sortedHands.add(new SortedHand(hands2));
-	
+
 		Values values = new Values(sortedHands);
 
 		int expected1 = 5;
@@ -163,7 +162,7 @@ public class ValuesTest {
 
 		int actual1 = values.getValues().get(0);
 		int actual2 = values.getValues().get(1);
-		
+
 		assertEquals(expected1, actual1);
 		assertEquals(expected2, actual2);
 	}
@@ -177,7 +176,7 @@ public class ValuesTest {
 		List<SortedHand> sortedHands = new ArrayList<SortedHand>();
 		sortedHands.add(new SortedHand(hands));
 		sortedHands.add(new SortedHand(hands2));
-	
+
 		Values values = new Values(sortedHands);
 
 		int expected1 = 6;
@@ -199,7 +198,7 @@ public class ValuesTest {
 		List<SortedHand> sortedHands = new ArrayList<SortedHand>();
 		sortedHands.add(new SortedHand(hands));
 		sortedHands.add(new SortedHand(hands2));
-	
+
 		Values values = new Values(sortedHands);
 
 		int expected1 = 7;
@@ -221,7 +220,7 @@ public class ValuesTest {
 		List<SortedHand> sortedHands = new ArrayList<SortedHand>();
 		sortedHands.add(new SortedHand(hands));
 		sortedHands.add(new SortedHand(hands2));
-	
+
 		Values values = new Values(sortedHands);
 
 		int expected1 = 8;
@@ -243,7 +242,7 @@ public class ValuesTest {
 		List<SortedHand> sortedHands = new ArrayList<SortedHand>();
 		sortedHands.add(new SortedHand(hands));
 		sortedHands.add(new SortedHand(hands2));
-	
+
 		Values values = new Values(sortedHands);
 
 		int expected1 = 9;
