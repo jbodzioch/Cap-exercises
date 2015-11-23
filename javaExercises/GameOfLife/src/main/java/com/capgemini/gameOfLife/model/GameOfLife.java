@@ -1,4 +1,4 @@
-package main.java.com.capgemini.game;
+package com.capgemini.gameOfLife.model;
 
 import java.util.*;
 import java.util.Map.Entry;

@@ -1,4 +1,7 @@
-package main.java.com.capgemini.game;
+package com.capgemini.gameOfLife.controller;
+
+import com.capgemini.gameOfLife.model.GameOfLife;
+import com.capgemini.gameOfLife.view.View;
 
 public class Controller {
 

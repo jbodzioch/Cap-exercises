@@ -1,4 +1,4 @@
-package test.java.com.capgemini.game;
+package com.capgemini.gameOfLife;
 
 import static org.junit.Assert.*;
 
@@ -9,7 +9,7 @@ import java.util.Map;
 
 import org.junit.Test;
 
-import main.java.com.capgemini.game.GameOfLife;
+import com.capgemini.gameOfLife.model.GameOfLife;
 
 public class GameOfLifeTest {
 

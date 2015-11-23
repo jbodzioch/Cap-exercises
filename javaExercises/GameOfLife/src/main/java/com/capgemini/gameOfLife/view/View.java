@@ -1,4 +1,4 @@
-package main.java.com.capgemini.game;
+package com.capgemini.gameOfLife.view;
 
 import java.awt.BorderLayout;
 import java.awt.Font;
