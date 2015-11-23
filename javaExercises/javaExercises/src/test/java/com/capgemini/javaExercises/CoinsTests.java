@@ -1,4 +1,4 @@
-package test;
+package com.capgemini.javaExercises;
 
 import static org.junit.Assert.assertEquals;
 

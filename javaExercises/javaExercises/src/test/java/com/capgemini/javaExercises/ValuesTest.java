@@ -1,4 +1,4 @@
-package pokerHandsTest;
+package com.capgemini.javaExercises;
 
 import static org.junit.Assert.*;
 
