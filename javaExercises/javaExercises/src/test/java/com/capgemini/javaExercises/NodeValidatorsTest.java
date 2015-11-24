@@ -24,6 +24,7 @@ public class NodeValidatorsTest {
 		nodes.add(new Node("1236", "desc", "1235"));
 		nodes.add(new Node("1237", "desc", "1236"));
 		nodes.add(new Node("1238", "desc", "1237"));
+		validators.validateMethod(nodes);
 	}
 
 	@Test

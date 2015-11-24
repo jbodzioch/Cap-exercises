@@ -4,10 +4,20 @@ import java.awt.Point;
 import java.util.*;
 
 public class Taxi {
-	// wzorzec
-	final int SIZE = 10;
-	char[][] gameBoard = new char[SIZE][SIZE];
-	final int MULTIPLIER = 4;
+
+	private final int SIZE = 10;
+	private char[][] gameBoard = new char[SIZE][SIZE];
+	private final int MULTIPLIER = 4;
+
+	private String result;
+
+	public String getResult() {
+		return result;
+	}
+
+	public void setResult(String result) {
+		this.result = result;
+	}
 
 	public Taxi() {
 
@@ -15,8 +25,7 @@ public class Taxi {
 		setCustomer();
 		setTaxi();
 		setAvailability();
-		drawBoard();
-		calculate();
+		setResult(calculate());
 	}
 
 	public void setCustomer() {
@@ -62,16 +71,9 @@ public class Taxi {
 		}
 	}
 
-	public void drawBoard() {
-		for (int i = 0; i < SIZE; i++) {
-			for (int j = 0; j < SIZE; j++) {
-				System.out.print("[" + gameBoard[i][j] + "]");
-			}
-			System.out.println();
-		}
-	}
+	public String calculate() {
 
-	public void calculate() {
+		String result;
 
 		Point client = new Point(0, 0);
 		List<Point> taxies = new ArrayList<Point>();
@@ -80,7 +82,9 @@ public class Taxi {
 		client = getClientCoords();
 		taxies = getTaxiesCoords();
 		distances = getDistances(client, taxies);
-		printDistances(taxies, distances);
+		result = printDistances(taxies, distances);
+
+		return result;
 	}
 
 	public Point getClientCoords() {
@@ -128,12 +132,16 @@ public class Taxi {
 		return distances;
 	}
 
-	public void printDistances(List<Point> taxies, List<Double> distances) {
+	public String printDistances(List<Point> taxies, List<Double> distances) {
+
+		String result = " ";
 
 		for (int i = 0; i < distances.size(); i++) {
 			if (distances.get(i) < 1) {
-				System.out.println("Available taxi at: " + taxies.get(i).getX() + " " + taxies.get(i).getY());
+				result = result + "Available taxi at: " + taxies.get(i).getX() + " " + taxies.get(i).getY();
 			}
 		}
+
+		return result;
 	}
 }

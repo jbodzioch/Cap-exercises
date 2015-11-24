@@ -6,6 +6,15 @@ import java.util.*;
 public class Poker {
 
 	private final String adress = "src/main/java/com/capgemini/pokerHands/poker.txt";
+	private String result;
+
+	public String getResult() {
+		return result;
+	}
+
+	public void setResult(String result) {
+		this.result = result;
+	}
 
 	public Poker() {
 
@@ -14,11 +23,11 @@ public class Poker {
 		List<SortedHands> sortedHands = sortHands(hands);
 		List<Values> values = evaluate(sortedHands);
 		List<WinCounter> wins = countFirstHandWins(values);
-		printWins(wins);
+		setResult(printWins(wins));
 	}
 
 	private List<String> getLines(String adress) {
-		
+
 		List<String> lines = new ArrayList<String>();
 
 		File file = new File(adress);
@@ -83,8 +92,9 @@ public class Poker {
 		return wins;
 	}
 
-	private void printWins(List<WinCounter> winCounter) {
+	private String printWins(List<WinCounter> winCounter) {
 
+		String result;
 		int wins = 0;
 
 		for (int i = 0; i < winCounter.size(); i++) {
@@ -93,6 +103,8 @@ public class Poker {
 			}
 		}
 
-		System.out.println("Won by hand 1: " + wins);
+		result = "Won by hand 1: " + wins;
+
+		return result;
 	}
 }

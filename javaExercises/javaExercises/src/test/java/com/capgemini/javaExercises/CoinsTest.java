@@ -10,7 +10,7 @@ import org.junit.Test;
 
 import com.capgemini.coins.Coins;
 
-public class CoinsTests {
+public class CoinsTest {
 
 	private List<Integer> mylist;
 
